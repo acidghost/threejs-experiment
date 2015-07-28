@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width')
+    title= title
+    block css
+      link(rel='stylesheet', href='/css/style.css')
+    block js
+      if ENV_DEVELOPMENT
+        script(src='http://localhost:35729/livereload.js')
+      //- bower:js
+      script(src='/components/jquery/dist/jquery.js')
+      script(src='/components/threejs/build/three.js')
+      script(src='/components/threejs/examples/js/controls/VRControls.js')
+      script(src='/components/threejs/examples/js/effects/VREffect.js')
+      script(src='/components/webvr-polyfill/build/webvr-polyfill.js')
+      script(src='/components/webvr-boilerplate/build/webvr-manager.js')
+      script(src='/components/lodash/lodash.js')
+      script(src='/components/kibo/kibo.js')
+      //- endbower
+      script(src='/js/app.js')
+  body
+    block content

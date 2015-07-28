@@ -1,0 +1,25 @@
+{
+  "name": "threejs-experiment",
+  "version": "0.0.0",
+  "homepage": "https://github.com/acidghost/threejs-experiment",
+  "authors": [
+    "acidghost <andreajemmett@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "threejs": "*",
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.0",
+    "kibo": "~1.1.0",
+    "webvr-polyfill": "borismus/webvr-polyfill",
+    "webvr-boilerplate": "borismus/webvr-boilerplate"
+  }
+}
