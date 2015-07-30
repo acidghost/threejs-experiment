@@ -29,6 +29,7 @@ public/components
 .sass-cache
 
 .idea
+.tmp
 
 # Compiled files
 public/css/**/*.css

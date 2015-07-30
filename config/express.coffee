@@ -1,6 +1,7 @@
 express = require 'express'
 glob = require 'glob'
 
+fs = require 'fs'
 favicon = require 'serve-favicon'
 logger = require 'morgan'
 cookieParser = require 'cookie-parser'
@@ -12,7 +13,7 @@ module.exports = (app, config) ->
   env = process.env.NODE_ENV || 'development'
   app.locals.ENV = env;
   app.locals.ENV_DEVELOPMENT = env == 'development'
-  
+
   app.set 'views', config.root + '/app/views'
   app.set 'view engine', 'jade'
 
@@ -26,6 +27,10 @@ module.exports = (app, config) ->
   app.use compress()
   app.use express.static config.root + '/public'
   app.use methodOverride()
+
+  # Create .tmp directory
+  if !fs.existsSync config.tmp
+    fs.mkdirSync config.tmp
 
   controllers = glob.sync config.root + '/app/controllers/**/*.coffee'
   controllers.forEach (controller) ->
@@ -41,7 +46,7 @@ module.exports = (app, config) ->
 
   # development error handler
   # will print stacktrace
-  
+
   if app.get('env') == 'development'
     app.use (err, req, res, next) ->
       res.status err.status || 500

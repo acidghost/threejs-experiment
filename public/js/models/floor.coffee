@@ -13,6 +13,7 @@ class App.Floor extends THREE.Mesh
     super geo, mat
     @rotation.x = -0.5 * Math.PI
     @receiveShadow = true
+    @position.set 100, 0, -100
 
   getFog: ->
-    new THREE.FogExp2 @opts.color, 0.002
+    new THREE.FogExp2 @opts.color, 0.001

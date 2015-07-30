@@ -1,8 +1,21 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+@import "../components/bootstrap/less/bootstrap";
 
-a {
-  color: #00B7FF;
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  #info-panel {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    background-color: fadeOut(@gray-darker, 20%);
+    color: whitesmoke;
+    padding: 0 10px;
+    text-align: center;
+    border-radius: 0 0 6px 6px;
+    img {
+      margin: 10px;
+    }
+  }
 }

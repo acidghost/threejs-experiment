@@ -17,15 +17,6 @@ module.exports = function (grunt) {
         file: 'app.js'
       }
     },
-    wiredep: {
-      task: {
-        //cwd: 'public/',
-        src: [
-          'app/views/**/*.jade',
-          'public/css/style.less'
-        ]
-      }
-    },
     less: {
       dist: {
         files: {

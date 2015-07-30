@@ -15,11 +15,15 @@
     "tests"
   ],
   "dependencies": {
-    "threejs": "*",
+    "threejs": "dev",
     "jquery": "~2.1.4",
     "lodash": "~3.10.0",
     "kibo": "~1.1.0",
     "webvr-polyfill": "borismus/webvr-polyfill",
-    "webvr-boilerplate": "borismus/webvr-boilerplate"
+    "webvr-boilerplate": "borismus/webvr-boilerplate",
+    "dat.gui": "*",
+    "qrcode.js": "davidshimjs/qrcodejs",
+    "Console.js": "*",
+    "bootstrap": "~3.3.5"
   }
 }

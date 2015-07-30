@@ -1,5 +1,23 @@
 extends layout
 
+block append js
+  script(src='/components/Console.js/console.js')
+  script(src='/components/jquery/dist/jquery.js')
+  script(src='/components/lodash/lodash.js')
+  script(src='/components/threejs/build/three.js')
+  script(src='/components/threejs/examples/js/controls/VRControls.js')
+  script(src='/components/threejs/examples/js/effects/VREffect.js')
+  script(src='/components/webvr-polyfill/build/webvr-polyfill.js')
+  script(src='/components/webvr-boilerplate/build/webvr-manager.js')
+  script(src='/socket.io/socket.io.js')
+  script(src='/components/kibo/kibo.js')
+  script(src='/components/dat.gui/dat.gui.js')
+  script(src='/js/app.js')
+
 block content
-  h1= title
-  p Welcome to #{title}
+  #info-panel
+    div
+      img(src='/qrcode', width=100)
+      ul.list-unstyled
+        - for item in info
+          li!= info

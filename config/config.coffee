@@ -5,6 +5,7 @@ env      = process.env.NODE_ENV || 'development'
 config =
   development:
     root: rootPath
+    tmp: "#{rootPath}/.tmp"
     app:
       name: 'threejs-experiment'
     port: 3000
@@ -12,6 +13,7 @@ config =
 
   test:
     root: rootPath
+    tmp: "#{rootPath}/.tmp"
     app:
       name: 'threejs-experiment'
     port: 3000
@@ -19,6 +21,7 @@ config =
 
   production:
     root: rootPath
+    tmp: "#{rootPath}/.tmp"
     app:
       name: 'threejs-experiment'
     port: 3000

@@ -19,5 +19,10 @@ var app = express();
 
 require('./config/express')(app, config);
 
-app.listen(config.port);
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+require('./app/sockets')(io, config);
+
+http.listen(config.port);
 
